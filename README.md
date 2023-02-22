@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Challenge 4 week 4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Teléfono React
 
-## Available Scripts
+Aquí tienes la maquetación HTML/CSS de una aplicación, tendrás que programarla en React.
 
-In the project directory, you can run:
+Se debe poder escribir un número de teléfono clicando en los botones numéricos. La tecla borrar puede borrar el último dígito o borrar el número completo, como prefieras.
+Sólo se verá o el botón Llamar o el botón Colgar, nunca los dos a la vez.
+No se puede introducir un número de más de 9 cifras.
+El botón Llamar sólo se puede pulsar si el número tiene 9 cifras. Cuando tenga 9 cifras el botón debe tener la clase "active".
+El mensaje superior "Llamando..." sólo aparece cuando se pulsa el botón "Llamar" y mientras dure la llamada. Usa la clase "off" para controlar su visibilidad (el elemento HTML correspondiente debe seguir estando, aunque no se vea).
+Al pulsar el botón "Llamar", éste debe desaparecer del DOM y debe aparecer en su lugar el botón "Colgar". El teclado tiene que quedar deshabilitado.
+Al pulsar el botón "Colgar", éste debe desaparecer y debe aparecer en su lugar el botón "Llamar". El teclado tiene que habilitarse. Además, se debe borrar el número de teléfono.
+Si no ocurre nada tras cinco segundos de llamada, ésta se debe colgar automáticamente.
+Separa todo en los siguientes componentes:
 
-### `npm start`
+Info
+Display
+Actions
+Action
+Keyboard
+Key
+Entrega también un listado de responsabilidades.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Responsabilities
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## COMPONENT INFO
 
-### `npm test`
+1-Print call state;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2-Recibe dats form action component;
 
-### `npm run build`
+3-interact with action component;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## COMPONENT DISPLAY
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1-Print the user input combinations;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2-Recibe datas from key component;
 
-### `npm run eject`
+3-interact with key component, and action component;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## COMPONENT ACTIONS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1-print action;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2-recibe action component;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3-interact with display, keyboard;
 
-## Learn More
+## ACTION
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1- print  "call" or "hang" buttons;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2- recibe "click" event from user;
+
+3- interact with info component and display component;
+
+## KEYBOARD
+
+1- print key;
+
+2- recibe key component;
+
+3- interact with key component;
+
+## KEY
+
+1- print number button;
+
+2- recibe "click" event from user;
+
+3- interact with info;

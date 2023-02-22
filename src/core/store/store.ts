@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
+import phoneReducer from '../../feature/reducer/call.reducer';
 
 export const store = configureStore({
   reducer: {
-    
+    phone: phoneReducer,
   },
 });
 
